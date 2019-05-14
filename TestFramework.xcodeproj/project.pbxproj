@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0480DE73228AE6E4009790D3 /* TestFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480DE71228AE6E4009790D3 /* TestFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0480DE7B228AE75C009790D3 /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0480DE79228AE75C009790D3 /* ViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0480DE7C228AE75C009790D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480DE7A228AE75C009790D3 /* ViewController.m */; };
+		0480DE7D228AE7FA009790D3 /* ViewController.m in Headers */ = {isa = PBXBuildFile; fileRef = 0480DE7A228AE75C009790D3 /* ViewController.m */; };
+		04FC865E228AFD3900750C5F /* ProtocolBuffers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04FC865C228AFC9B00750C5F /* ProtocolBuffers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0480DE6E228AE6E4009790D3 /* TestFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0480DE71228AE6E4009790D3 /* TestFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFramework.h; sourceTree = "<group>"; };
 		0480DE72228AE6E4009790D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0480DE79228AE75C009790D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0480DE7A228AE75C009790D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04FC865C228AFC9B00750C5F /* ProtocolBuffers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProtocolBuffers.framework; path = "../../hellotalk carthage/Carthage/Build/iOS/ProtocolBuffers.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FC865E228AFD3900750C5F /* ProtocolBuffers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +40,7 @@
 			children = (
 				0480DE70228AE6E4009790D3 /* TestFramework */,
 				0480DE6F228AE6E4009790D3 /* Products */,
+				04FC865B228AFC9B00750C5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,8 +57,18 @@
 			children = (
 				0480DE71228AE6E4009790D3 /* TestFramework.h */,
 				0480DE72228AE6E4009790D3 /* Info.plist */,
+				0480DE79228AE75C009790D3 /* ViewController.h */,
+				0480DE7A228AE75C009790D3 /* ViewController.m */,
 			);
 			path = TestFramework;
+			sourceTree = "<group>";
+		};
+		04FC865B228AFC9B00750C5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04FC865C228AFC9B00750C5F /* ProtocolBuffers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +79,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0480DE73228AE6E4009790D3 /* TestFramework.h in Headers */,
+				0480DE7B228AE75C009790D3 /* ViewController.h in Headers */,
+				0480DE7D228AE7FA009790D3 /* ViewController.m in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0480DE7C228AE75C009790D3 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +285,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "TestFramework/**";
 				INFOPLIST_FILE = TestFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -286,6 +309,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "TestFramework/**";
 				INFOPLIST_FILE = TestFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
